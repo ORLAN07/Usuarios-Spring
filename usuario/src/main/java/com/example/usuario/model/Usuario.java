@@ -36,27 +36,26 @@ public class Usuario implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
     
     @NotBlank
-    private String Nombre;
+    private String nombre;
     
     @NotBlank
-    private String Apellido;
+    private String apellido;
+    
+    private int edad;
     
     @NotBlank
-    private int Edad;
+    private String cargo;
     
     @NotBlank
-    private String Cargo;
-    
-    @NotBlank
-    private String Password;
+    private String password;
     
     @NotBlank
     private String email;
     
-    @NotBlank
+    
     @Column(nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
     @CreatedDate
@@ -69,52 +68,53 @@ public class Usuario implements Serializable{
     private Date updatedAT;
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
-    public void setId(Long Id) {
-        this.Id = Id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getApellido() {
-        return Apellido;
+        return apellido;
     }
 
-    public void setApellido(String Apellido) {
-        this.Apellido = Apellido;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public int getEdad() {
-        return Edad;
+        return edad;
     }
 
-    public void setEdad(int Edad) {
-        this.Edad = Edad;
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
     public String getCargo() {
-        return Cargo;
+        return cargo;
     }
 
-    public void setCargo(String Cargo) {
-        this.Cargo = Cargo;
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
-    public void setPassword(String Password) {
-        this.Password = Password;
+    public void setPassword(String password) {
+        this.password = password;
     }
+
 
     public String getEmail() {
         return email;
