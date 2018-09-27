@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -60,7 +61,7 @@ public class UsuarioController {
         return usuarioRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("Usuario", "Id", userId));
     }
     
-    @PostMapping("/usuario/{id}")
+    @PutMapping("/usuario/{id}")
     public Usuario updateUser(@PathVariable(value = "id") Long usuarioId, @Valid  @RequestBody Usuario usuarioDetails){
         Usuario usuario = usuarioRepository.findById(usuarioId).orElseThrow(() -> new ResourceNotFoundException("Usuario", "Id", usuarioId));
         
