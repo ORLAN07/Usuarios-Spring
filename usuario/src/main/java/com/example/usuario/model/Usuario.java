@@ -36,7 +36,7 @@ public class Usuario implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private Long Id;
     
     @NotBlank
     private String Nombre;
@@ -68,11 +68,11 @@ public class Usuario implements Serializable{
     @LastModifiedDate
     private Date updatedAT;
 
-    public int getId() {
+    public Long getId() {
         return Id;
     }
 
-    public void setId(int Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
@@ -138,7 +138,7 @@ public class Usuario implements Serializable{
 
     public void setUpdatedAT(Date updatedAT) {
         this.updatedAT = updatedAT;
-    }
+    } 
     
     
 }
